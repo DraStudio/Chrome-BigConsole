@@ -19,7 +19,7 @@ html, body {
   background-color: #F6F6F6;
   float: left;
   height: 100%;
-  width: 60%;
+  width: 50%;
 }
 #log-inner {
   font-family: "Lucida Console", monospace;
@@ -58,10 +58,10 @@ html, body {
   color: #AA0000;
 }
 #console-wrapper {
-  float: right;
+  float: left;
   height: 100%;
   position: relative;
-  width: 40%;
+  width: 50%;
 }
 #textarea-wrapper {
   bottom: 28px;
@@ -71,7 +71,7 @@ html, body {
   top: 0;
 }
 #editor {
-  font-size: 16px;
+  font-size: 12px;
   height: 100%;
   margin: 0;
   width: 100%;
@@ -106,5 +106,15 @@ html, body {
   </div>
 </div>
 <div style="clear: both;"></div>
+    
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/themes/smoothness/jquery-ui.css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js"></script>
+<script>
+    $(function(){
+        $("#log").resizable({alsoResize: "#console-wrapper"});
+        $("#console-wrapper").resizable();
+    });
+</script>
 </body>
 </html>
